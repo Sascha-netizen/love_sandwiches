@@ -62,7 +62,7 @@ def update_sales_worksheet(data):
 
 
 def calculate_surplus_data(sales_row):
-    """"
+    """
     Compare sales with stock, and calculate the surplus for each item type.
     The surplus is defined as the sales figure subtracted from the stock:
         - positive surplus indicates waste, and
@@ -75,10 +75,10 @@ def calculate_surplus_data(sales_row):
     surplus_data = []
     for stock, sales in zip(stock_row, sales_row):
         surplus = int(stock) - sales
-        new_surplus_data = surplus_data.append(surplus)
-        print(new_surplus_data)
-    
+        surplus_data.append(surplus)
+    print(surplus_data)
     return surplus_data
+
 
 
 def main():
